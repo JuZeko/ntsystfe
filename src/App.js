@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import AppRoutes from './AppRoutes';
+import { UserContext } from '../src/Context/UserContext';
+import { NavMenu } from './components/NavMenu/NavMenu';
+import './shared.css';
 
-function App() {
+export default function App() {
+  const profile = {
+    name: '',
+    email: '',
+    role: ''
+  }
+  const [user, setUser] = useState(profile);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <UserContext.Provider value={{ user, setUser }}>
+        <NavMenu />
+        <Routes>
+          {AppRoutes.map((route, index) => {
+            const { element, ...rest } = route;
+            return <Route key={index} {...rest} element={element} />;
+          })}
+        </Routes>
+      </UserContext.Provider>
     </div>
   );
 }
 
-export default App;
+

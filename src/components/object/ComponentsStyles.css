@@ -1,0 +1,66 @@
+.loginFormContainer{    
+    width: 30%;
+    height: 70%;
+}
+
+.loginFormWrapper{
+   margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.objectCard{
+    width: 60rem;
+    border-radius: 5px;
+    border: solid;
+    margin: 2rem;
+}
+.objectsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.objectsWrapper{
+
+}
+.card-img{
+    width: 100%;
+    height: 30rem;
+}
+.categoryWrapper{
+    margin: 30px;
+    border-bottom: solid;
+    padding: 2rem;
+}
+.objectWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editObjectContainer{
+    width: 50%;
+}
+.agreementsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.agreementsWrapper{
+    width: 60rem;
+}
+.agreementWrapper{
+    padding: 5rem;
+    margin: 20px;
+    border: solid;
+    border-radius: 5px;
+}
+.homeWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.troll{
+    width: 1000px;
+    height: 800px;
+}
